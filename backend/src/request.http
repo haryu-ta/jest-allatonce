@@ -1,0 +1,41 @@
+# グループの作成
+POST http://localhost:3000/groups
+Content-Type: application/json
+
+{
+  "name": "テストグループ1",
+  "members": ["一郎", "二郎", "三郎"]
+}
+
+###
+
+# グループ一覧の取得
+GET http://localhost:3000/groups
+
+###
+
+# グループ名を指定してグループを取得
+GET http://localhost:3000/groups/テストグループ1
+
+###
+
+# 支出の登録
+POST http://localhost:3000/expenses
+Content-Type: application/json
+
+{
+  "groupName": "テストグループ1",
+	"expenseName": "ディナー",
+	"payer": "一郎",
+	"amount": 10000
+}
+
+###
+
+# 清算リストの取得
+GET http://localhost:3000/settlements/テストグループ1
+
+###
+
+# テストデータの初期化
+GET http://localhost:3000/init
