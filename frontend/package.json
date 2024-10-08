@@ -10,7 +10,11 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "play": "playwright test",
+    "play:head": "playwright test --headed",
+    "play:ui": "playwright test --ui",
+    "play:report": "playwright show-report"
   },
   "dependencies": {
     "@chakra-ui/react": "2.8.1",
@@ -28,6 +32,7 @@
   },
   "devDependencies": {
     "@chakra-ui/storybook-addon": "5.0.1",
+    "@playwright/test": "^1.47.2",
     "@storybook/addon-essentials": "7.4.0",
     "@storybook/addon-interactions": "7.4.0",
     "@storybook/addon-links": "7.4.0",
@@ -40,6 +45,7 @@
     "@testing-library/react": "14.0.0",
     "@testing-library/user-event": "14.4.3",
     "@types/jest": "29.5.4",
+    "@types/node": "^22.7.4",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "@typescript-eslint/eslint-plugin": "6.6.0",
